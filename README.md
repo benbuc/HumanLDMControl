@@ -15,15 +15,22 @@ Welcome to the official code repository for our paper:
 
 In this repository, we provide the implementation to control human shape and pose in pretrained text-to-image diffusion models using a 3D human parametric model (SMPL). This includes our domain adaptation technique that maintains visual fidelity while providing fine-grained control over human appearance.
 
+
+<div align="center">
+🔗 <a href="https://ivpg.github.io/humanLDM">Project Page</a>
+📃 <a href="https://arxiv.org/abs/2411.04724">Arxiv</a>
+</div>
+
 ---
 
-## 🔗 [Project Page](https://ivpg.github.io/humanLDM)
+![Teaser Image](teaser.png)
+### Abstract
+We present a methodology for conditional control of human shape and pose in pretrained text-to-image diffusion models using a 3D human parametric model (SMPL). Fine-tuning these diffusion models to adhere to new conditions requires large datasets and high-quality annotations, which can be more cost-effectively acquired through synthetic data generation rather than real-world data. However, the domain gap and low scene diversity of synthetic data can compromise the pretrained model's visual fidelity. We propose a domain-adaptation technique that maintains image quality by isolating synthetically trained conditional information in the classifier-free guidance vector and composing it with another control network to adapt the generated images to the input domain. To achieve SMPL-control, we fine-tune a ControlNet-based architecture on the synthetic SURREAL dataset of rendered humans and apply our domain adaptation at generation time. Experiments demonstrate that our model achieves greater shape and pose diversity than the 2D pose-based ControlNet, while maintaining the visual fidelity and improving stability, proving its usefulness for downstream tasks such as human animation.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Model Setup](#model-setup)
 - [Running Sample Inference](#running-sample-inference)
-- [Example Outputs](#example-outputs)
 - [Citation](#citation)
 
 ---
@@ -80,7 +87,7 @@ This will reconstruct the teaser images from our paper to the file `sample_outpu
 
 ---
 
-## BibTeX
+## Citation
 
 ```bibtex
 @inproceedings{buchheim2025controlling,
@@ -94,6 +101,6 @@ This will reconstruct the teaser images from our paper to the file `sample_outpu
 ---
 
 ## Acknowledgments
-Our work "Controlling Human Shape and Pose in Text-to-Image Diffusion Models via Domain Adaptation" was partially funded by the German Federal Ministry of Education and Research (BMBF) through grants 01IS15041 – “mdViPro” and 01IS19006 – “KI-Labor ITSE”.
+Our work "Controlling Human Shape and Pose in Text-to-Image Diffusion Models via Domain Adaptation" was partially funded by the German Federal Ministry of Education and Research (BMBF) through grants 01IS15041 – “mdViPro” and 01IS19006.
 
 
