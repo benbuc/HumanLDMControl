@@ -31,6 +31,7 @@ We present a methodology for conditional control of human shape and pose in pret
 - [Installation](#installation)
 - [Model Setup](#model-setup)
 - [Running Sample Inference](#running-sample-inference)
+- [Training](#training)
 - [Citation](#citation)
 
 ---
