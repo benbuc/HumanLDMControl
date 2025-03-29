@@ -87,6 +87,12 @@ This will reconstruct the teaser images from our paper to the file `sample_outpu
 
 ---
 
+## Training
+
+After setting up the environment (see above), you can train the model using the provided training script `run_train.sh`.
+To run the script as is you have to download our `datasets` version of the SURREAL dataset and unzip from the root directory to `surreal/`.
+The training script `train.py` is directly adapted from the [Huggingface ControlNet guide](https://huggingface.co/blog/train-your-controlnet). The original file can be downloaded [here](https://github.com/huggingface/diffusers/blob/main/examples/controlnet/train_controlnet.py).
+
 ## Citation
 
 ```bibtex
