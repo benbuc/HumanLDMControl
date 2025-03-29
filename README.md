@@ -85,6 +85,11 @@ python run_sample_inference.py
 
 This will reconstruct the teaser images from our paper to the file `sample_output.png`.
 
+The following command will run the shape-controlled version of AnimateDiff:
+```bash
+python run_sample_inference_animated.py
+```
+
 ---
 
 ## Training
