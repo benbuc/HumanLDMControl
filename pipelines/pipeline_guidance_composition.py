@@ -487,7 +487,7 @@ class StableDiffusionComposedControlNetPipeline(StableDiffusionControlNetPipelin
         else:
             assert False
 
-        # 4.5. prepare extra condition
+        # 4.5. prepare SMPL condition
         smpl_condition = self.prepare_smpl_condition(
             smpl_condition,
             batch_size,
