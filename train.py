@@ -190,14 +190,6 @@ def log_validation(
 
                 images.append(image)
 
-            for i, image in enumerate(images):
-                image.save(
-                    os.path.join(
-                        args.output_dir,
-                        f"{step:08d}_{desc}_{i}.png",
-                    )
-                )
-
             image_logs.append(
                 {
                     "validation_image": validation_image,

@@ -7,8 +7,7 @@ accelerate launch train.py \
  --controlnet_model_name_or_path=$CONTROL_MODEL_DIR \
  --output_dir=$OUTPUT_DIR \
  --dataset_name="surreal" \
- --image_column="target" \
- --conditioning_image_column="pose" \
+ --use_video_inputs \
  --resolution=512 \
  --seed=42 \
  --learning_rate=5e-5 \
@@ -17,9 +16,10 @@ accelerate launch train.py \
  --validation_prompt "a man standing in a kitchen with a large counter" \
  --checkpointing_steps 10000 \
  --checkpoints_total_limit 5 \
- --num_train_epochs 3 \
  --dataloader_num_workers=4 \
  --train_batch_size 4 \
  --validation_steps 2000 \
  --resume_from_checkpoint=latest \
+ --max_train_steps 200000 \
+ #--num_train_epochs 3 \
 
