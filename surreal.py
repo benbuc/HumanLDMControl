@@ -7,6 +7,7 @@ import scipy.io as sio
 from pathlib import Path
 from PIL import Image
 import random
+from datasets import load_dataset
 
 
 _CITATION = ""
@@ -77,3 +78,8 @@ class Surreal(datasets.GeneratorBasedBuilder):
                 idx += 1
 
 
+if __name__ == "__main__":
+    # Load the dataset
+    dataset = load_dataset("surreal.py")
+    print(dataset)
+    print("Dataset loaded successfully.")

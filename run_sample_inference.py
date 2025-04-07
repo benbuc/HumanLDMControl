@@ -22,11 +22,12 @@ domain_guidance_controlnet = ControlNetModel.from_pretrained(
     domain_guidance_controlnet_path, torch_dtype=torch.float16
 ).to("cuda")
 attribute_guidance_controlnet = ControlNetModel.from_pretrained(
-    attribute_guidance_controlnet_path, torch_dtype=torch.float16
+    attribute_guidance_controlnet_path, torch_dtype=torch.float16, local_files_only=True
 ).to("cuda")
 smpl_embedder = SMPLEmbedderModel.from_pretrained(
     smpl_embedder_path,
     torch_dtype=torch.float16,
+    local_files_only=True
 ).to("cuda")
 pipe = StableDiffusionComposedControlNetPipeline.from_pretrained(
     base_model_path,

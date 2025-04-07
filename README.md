@@ -59,7 +59,7 @@ We present a methodology for conditional control of human shape and pose in pret
    Download the model from [this link](https://drive.google.com/file/d/1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e/view?usp=sharing) and extract it to the `checkpoints/` directory.:
    ```bash
    cd checkpoints/
-   gdown --id 1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e -O attribute_guidance.zip
+   gdown 1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e -O attribute_guidance.zip
    unzip attribute_guidance.zip
    ```
 
@@ -96,8 +96,57 @@ python run_sample_inference_animated.py
 ## Training
 
 After setting up the environment (see above), you can train the model using the provided training script `run_train.sh`.
-To run the script as is you have to download our `datasets` version of the SURREAL dataset and unzip from the root directory to `surreal/`.
 The training script `train.py` is directly adapted from the [Huggingface ControlNet guide](https://huggingface.co/blog/train-your-controlnet). The original file can be downloaded [here](https://github.com/huggingface/diffusers/blob/main/examples/controlnet/train_controlnet.py).
+
+### Download Dataset
+Download the SURREAL dataset: [https://www.di.ens.fr/willow/research/surreal/](https://www.di.ens.fr/willow/research/surreal/)
+
+Unpack the dataset into a folder `SURREAL/` in the root directory of this repository.
+```bash
+cd HumanLDMControl/
+tar -xvf SURREAL_v1.tar.gz -C SURREAL
+```
+
+The resulting folder structure should look like this:
+```
+HumanLDMControl/
+├── checkpoints/
+│   └── ...
+└── SURREAL/
+    └── cmu/
+        └── ...
+```
+
+Download our OpenPose annotations for the dataset from [this link](https://drive.google.com/file/d/1-1IAC0oNvSN_bSM6EfXPSVRck0iFV1Qs/view?usp=sharing) and unpack in the `SURREAL/`directory.
+```bash
+cd SURREAL/
+gdown 1-1IAC0oNvSN_bSM6EfXPSVRck0iFV1Qs -O surreal_openpose.zip
+unzip surreal_openpose.zip
+cd ..
+```
+
+### Dataset preparation
+The file `surreal.py` holds a custom `datasets` class for SURREAL.
+Run the file once to let `datasets` load the dataset and store it in the case.
+```bash
+python surreal.py
+```
+This will take a while (1605030 samples), but after reading the dataset once, it can be quickly loaded using the `load_dataset("surreal")` function from the `datasets` library.
+
+
+### Running Training
+If you haven't done so already, initialize your accelerate configuration using:
+```bash
+accelerate config
+```
+We trained with floating point 16 precision.
+
+To start training with some default parameters you can use the sample training script:
+```bash
+bash run_train.sh
+```
+
+
 
 ## Citation
 

@@ -20,6 +20,6 @@ accelerate launch train.py \
  --train_batch_size 4 \
  --validation_steps 2000 \
  --resume_from_checkpoint=latest \
- --max_train_steps 200000 \
+ --max_train_steps 50000 \
  #--num_train_epochs 3 \
 
