@@ -127,7 +127,7 @@ cd ..
 
 ### Dataset preparation
 The file `surreal.py` holds a custom `datasets` class for SURREAL.
-Run the file once to let `datasets` load the dataset and store it in the case.
+Run the file once to let `datasets` load the dataset and store it in the cache.
 ```bash
 python surreal.py
 ```
