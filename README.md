@@ -56,7 +56,7 @@ We present a methodology for conditional control of human shape and pose in pret
 ## Model Setup
 
 1. **Download the Pretrained Model**  
-   Download the model from [this link](https://drive.google.com/file/d/1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e/view?usp=sharing) and extract it to the `checkpoints/` directory.:
+   Download the model from [this link](https://drive.google.com/file/d/1_huFHFReTLkgKAf7z67pMJ68zeHaZPWm/view?usp=sharing) and extract it to the `checkpoints/` directory.:
    ```bash
    cd checkpoints/
    gdown 1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e -O attribute_guidance.zip
