@@ -59,7 +59,7 @@ We present a methodology for conditional control of human shape and pose in pret
    Download the model from [this link](https://drive.google.com/file/d/1_huFHFReTLkgKAf7z67pMJ68zeHaZPWm/view?usp=sharing) and extract it to the `checkpoints/` directory.:
    ```bash
    cd checkpoints/
-   gdown 1r9W1GeO4iUVYD1fNWyEjI36ODpbfPL2e -O attribute_guidance.zip
+   gdown 1_huFHFReTLkgKAf7z67pMJ68zeHaZPWm -O attribute_guidance.zip
    unzip attribute_guidance.zip
    ```
 
@@ -120,7 +120,7 @@ HumanLDMControl/
 Download our OpenPose annotations for the dataset from [this link](https://drive.google.com/file/d/1IKNf3jbXosb_Bnufogt5_nkOqzG-RmsK/view?usp=sharing) and unpack in the `SURREAL/`directory.
 ```bash
 cd SURREAL/
-gdown 1-1IAC0oNvSN_bSM6EfXPSVRck0iFV1Qs -O surreal_openpose.zip
+gdown 1IKNf3jbXosb_Bnufogt5_nkOqzG-RmsK -O surreal_openpose.zip
 unzip surreal_openpose.zip
 cd ..
 ```
