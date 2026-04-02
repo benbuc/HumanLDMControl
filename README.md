@@ -117,7 +117,7 @@ HumanLDMControl/
         └── ...
 ```
 
-Download our OpenPose annotations for the dataset from [this link](https://drive.google.com/file/d/1-1IAC0oNvSN_bSM6EfXPSVRck0iFV1Qs/view?usp=sharing) and unpack in the `SURREAL/`directory.
+Download our OpenPose annotations for the dataset from [this link](https://drive.google.com/file/d/1IKNf3jbXosb_Bnufogt5_nkOqzG-RmsK/view?usp=sharing) and unpack in the `SURREAL/`directory.
 ```bash
 cd SURREAL/
 gdown 1-1IAC0oNvSN_bSM6EfXPSVRck0iFV1Qs -O surreal_openpose.zip
